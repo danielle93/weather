@@ -2,21 +2,52 @@
 YOUR STYLES
 *******************/
 
-.temp {
-  color: red;
+section {
+  min-height: 50em;
+  width: 100%;
+  position: absolute;
 }
 
-.city {
-  color: green;
+#one {
+  background: red;
 }
 
-.state {
-  color: blue;
+#two {
+  background: green;
 }
 
-.image img{
-  // outline: 5px solid red;
+#three {
+  background: blue;
 }
+
+:target {
+  z-index: 1;
+}
+
+#homescreen {
+  background: yellow;
+  z-index: 1;
+}
+
+button {
+  display: block;
+}
+
+.sidr {
+  display: block;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  z-index: 999999;
+  width: 16em;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.sidr.left {
+  left: -16em;
+  right: auto;
+}
+
 
 
 

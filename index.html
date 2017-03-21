@@ -14,18 +14,46 @@
 	
 </head>
 <body>
-	
-  <!-- YOUR AWESOME WEBSITE -->
-	<h1>Weather</h1>
+<a id="sidr-show-hide" href="#sidr">&#9776;</a>
 
-<ul>
-  <li class="temp">Temperature</li>
-  <li class="city">City</li>
-  <li class="state">State</li>
-  <li class="image">
-  <img src="" alt="" />
-  </li>
-</ul>
+<h1>Weather App</h1>
+
+<section id="homescreen">
+<h3>HOME</h3>
+  </section>
+
+
+<section id="one">
+    <h1><span class="temp">00</span>&#x2109;</h1>
+    <h1 class="city">City</h1>
+    <img src="http://placehold.it/100x100" alt="" />
+</section>
+
+<section id="two">
+       <h1><span class="temp">00</span>&#x2109;</h1>
+       <h1 class="city">City</h1>
+       <img src="http://placehold.it/100x100" alt="" />
+</section>
+
+<section id="three">
+      <h1><span class="temp">00</span>&#x2109;</h1>
+      <h1 class="city">City</h1>
+      <img src="http://placehold.it/100x100" alt="" />
+      <button class="geo">Where U Be Tho?</button>
+</section>
+
+<aside id="sidr">
+
+  <ul>
+    <li><a href="#homescreen">Home</a></li>
+    <li><a href="#one">Spokane, WA</a></li>
+    <li><a href="#two">Kingman, KS</a></li>
+    <li><a href="#three">Get Location</a></li>
+  </ul>
+  
+  <a href="#sidr" id="close">X</a>
+  
+</aside>
 	
 
 
@@ -34,6 +62,7 @@
   <!-- jQuery Plugin -->
 <!--  <script src="js/plugin.js"></script>-->
  <script src="js/jquery.simpleWeather.min.js"></script>
+ <script src="js/jquery.sidr.min.js"></script>
   <!-- YOUR SCRIPTS GO HERE -->
   <script src="js/scripts.js"></script>
 </body>
