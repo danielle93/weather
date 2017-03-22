@@ -8,7 +8,9 @@ section {
 }
 
 
-#one {}
+#one {
+    
+}
 
 
 /*
@@ -54,8 +56,7 @@ button {
 }
 
 #sidr-show-hide{
-    font-size: .75em;
-    position: absolute;
+    font-size: 1.5em;
     padding: 0;
     margin: .5em;
     text-decoration: none;
