@@ -39,13 +39,39 @@ button {
     display: block;
 }
 
+#sidr{
+    text-decoration: none;
+    background: rgba(0,0,0,.5);
+    
+}
+
+ #sidr a{
+    color: #fff;
+    text-decoration: none;
+}
+
+#sidr ul{
+    padding-left: 10%;
+    list-style: none;
+    
+}
+
+#sidr li {
+    margin-bottom: 1em;
+}
+
+#sidr li:first-child {
+    margin-top: 2em;
+}
+
+
 .sidr {
     display: block;
     position: fixed;
     top: 0;
     height: 100%;
     z-index: 999999;
-    width: 16em;
+    width: 14em;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -56,12 +82,18 @@ button {
 }
 
 #sidr-show-hide{
-    font-size: 1.5em;
-    padding: 0;
-    margin: .5em;
+    padding: 2%;
+    font-size: 2em;
     text-decoration: none;
     color: rgba(255, 255, 255, 1);
     text-shadow: .5px .5px .5px rgba(0,0,0,.4);
+}
+
+#close {
+    position: absolute;
+    width: 100%;
+    margin-left: 90%;
+    margin-top: -55%;
 }
 
 
@@ -70,13 +102,9 @@ Conditional Weather Styling
 ***************************/
 
 #temp {
-    display: flex;
-    justify-content: flex-end;
     font-size: 2em;
-    margin-top: 0;
-    padding: .2em .4em;
-    position: re;
-    justify-content: flex-end;
+    margin-left: 80%;
+    margin-top: -8%;
     color: rgba(255, 255, 255, 1);
     text-shadow: .5px .5px .5px rgba(0,0,0,.4);
 }
@@ -87,7 +115,7 @@ Conditional Weather Styling
 }
 
 #city{
-    margin-top: -1em;;
+    margin-top: -1em;
     font-size: 1em;
     display: flex;
     justify-content: center;
@@ -95,11 +123,12 @@ Conditional Weather Styling
 }
 
 #currently{
+    display: flex;
+    justify-content: center;
+    margin-top: 25%;
     font-size: 2.5em;
     padding: .25em;
-    margin-top: 1.5em;
     width: 100%;
-    position: relative;
     color: #fff;
     text-shadow: 2px 2px 2px rgba(0,0,0,.4);
 }
@@ -167,7 +196,6 @@ Weather Icons
 }
 
 i {
-    margin-top: 0;
     display: flex;
     justify-content: center;
     color: rgba(0, 0, 0, .5);
