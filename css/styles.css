@@ -55,10 +55,14 @@ button {
 /***************************
 Conditional Weather Styling
 ***************************/
-
-
+#temp {
+    color: rgba(255,255,255,.2);
+}
+.temp{
+    color: rgba(255,255,255,.2);
+}
 i {
-  color: #000;
+  color: rgba(255,255,255,.2);
 
   font-size: 12em;
 }
@@ -90,7 +94,9 @@ background: linear-gradient(to left, #F2994A , #F2C94C); /* W3C, IE 10+/ Edge, F
 }
 
 .rainy {
-  background: blue;
+  background-image: url(../img/rainy.jpg);
+      background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .thunderstorms{
@@ -168,7 +174,7 @@ i {
 .icon-36:before { content: "1"; }
 .icon-37:before { content: "S"; }
 .icon-38:before { content: "S"; }
-.icon-39:before { content: "S"; }
+.icon-39:before { content: "W"; }
 .icon-40:before { content: "M"; }
 .icon-41:before { content: "W"; }
 .icon-42:before { content: "I"; }

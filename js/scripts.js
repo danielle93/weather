@@ -24,7 +24,6 @@ $('#close').sidr({
             }
             
             // On load, Get Geolocation, Call Weather Function
-
             $('.geo').ready(function () {
                   
                 //load weather using your lat/long coordinates
@@ -34,6 +33,7 @@ $('#close').sidr({
                   var lat = position.coords.latitude;
                   var long = position.coords.longitude;
                   
+                  $('#loading').hide();
                   console.log(lat, long);
                   
                   // Send to SimpleWeather
@@ -66,12 +66,13 @@ $('#close').sidr({
       
       // Get Condition Code
       console.log(weather.code);
+      console.log(weather.currently);
       
       if (weather.code >= 19 && weather.code <= 23 || weather.code == 26 || weather.code == 28 || weather.code == 30 || weather.code == 44) {
          $('body').addClass('cloudy');
       }
         
-if (weather.code == 23 || weather.code == 24) {
+      if (weather.code == 23 || weather.code == 24) {
          $('body').addClass('windy');
       }
         
@@ -92,12 +93,13 @@ if (weather.code == 23 || weather.code == 24) {
          $('body').addClass('cold');
       }
                   
-      if (weather.code == 40 || weather.code >= 5 && weather.code <= 13) {
+      if (weather.code == 39 || weather.code == 40 || weather.code >= 5 && weather.code <= 13) {
          $('body').addClass('rainy');
+         $('.currently').text('Water falling from the Hecking Sky! HECK!');
            
       }
 
-      if (weather.code == 3 || weather.code == 4 || weather.code == 37 || weather.code == 38 || weather.code == 39 || weather.code == 45 || weather.code == 47) {
+      if (weather.code == 3 || weather.code == 4 || weather.code == 37 || weather.code == 38 || weather.code == 45 || weather.code == 47) {
          $('body').addClass('thunderstorms');
       }
       
@@ -109,8 +111,15 @@ if (weather.code == 23 || weather.code == 24) {
          $('body').addClass('night');
       }
     
-    },
-      
+        
+// Current Conditional Text
+        
+//    if (weather.currently == 'Scattered Showers') {
+//        $('.currently').text('Water falling from the Hecking Sky! HECK!');
+//      }
+//      
+        
+        },
     error: function(error) {
       // Show if weather cannot be retreived
       console.log('Go do a heckin look outside.');
