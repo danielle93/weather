@@ -70,6 +70,7 @@ $('#close').sidr({
       
       if (weather.code >= 19 && weather.code <= 23 || weather.code == 26 || weather.code == 28 || weather.code == 30 || weather.code == 44) {
          $('body').addClass('cloudy');
+          $('.currently').text('Depressing & grey as heck');
       }
         
       if (weather.code == 23 || weather.code == 24) {
@@ -111,13 +112,6 @@ $('#close').sidr({
          $('body').addClass('night');
       }
     
-        
-// Current Conditional Text
-        
-//    if (weather.currently == 'Scattered Showers') {
-//        $('.currently').text('Water falling from the Hecking Sky! HECK!');
-//      }
-//      
         
         },
     error: function(error) {
