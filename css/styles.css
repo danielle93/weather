@@ -54,11 +54,11 @@ button {
 }
 
 #sidr-show-hide{
-    font-size: 1.5em;
+    font-size: .75em;
     position: absolute;
     padding: 0;
     margin: .5em;
-/*    text-decoration: none;*/
+    text-decoration: none;
     color: rgba(255, 255, 255, 1);
     text-shadow: .5px .5px .5px rgba(0,0,0,.4);
 }
@@ -166,7 +166,7 @@ Weather Icons
 }
 
 i {
-    margin-top: .5em;
+    margin-top: 0;
     display: flex;
     justify-content: center;
     color: rgba(0, 0, 0, .5);
