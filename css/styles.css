@@ -9,31 +9,22 @@ section {
 
 
 #one {
-    
+/*    background: darkgray;*/
 }
 
 
-/*
-#two {
-  background: green; 
+#two { 
+/*    background: darkgray;*/
 }
 
-#three {
-  background: white; 
+#three { 
+/*    background: darkgray;*/
 }
-*/
 
 :target {
     z-index: 1;
 }
 
-
-/*
-#homescreen {
-  background: yellow; 
-  z-index: 1; 
-}
-*/
 
 button {
     display: block;
@@ -115,7 +106,7 @@ Conditional Weather Styling
 }
 
 #city{
-    margin-top: -1em;
+    margin-top: -15%;
     font-size: 1em;
     display: flex;
     justify-content: center;
@@ -127,7 +118,7 @@ Conditional Weather Styling
     justify-content: center;
     margin-top: 25%;
     font-size: 2.5em;
-    padding: .25em;
+    padding: 5%;
     width: 100%;
     color: #fff;
     text-shadow: 2px 2px 2px rgba(0,0,0,.4);
@@ -196,6 +187,7 @@ Weather Icons
 }
 
 i {
+    margin-top: 20%;
     display: flex;
     justify-content: center;
     color: rgba(0, 0, 0, .5);
