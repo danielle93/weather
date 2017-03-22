@@ -1,4 +1,5 @@
 // YOUR SCRIPTS GO HERE
+document.requestFullscreen();
 
 // call Sidr Plugin. Toggle by Default
 $('#sidr-show-hide').sidr();
