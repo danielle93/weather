@@ -40,25 +40,7 @@ $('#close').sidr({
                   getWeather(lat + ',' + long);
                 });
                
-            });
-
-            $('.geo').click(function () {
-                  
-                //load weather using your lat/long coordinates
-                navigator.geolocation.getCurrentPosition(function (position) {
-                  
-                  // Check lat/long coordinates
-                  var lat = position.coords.latitude;
-                  var long = position.coords.longitude;
-                  
-                  console.log(lat, long);
-                  
-                  // Send to SimpleWeather
-                  getWeather(lat + ',' + long);
-                });
-               
-            });
-    
+            });    
 
                   
 //Get Weather
