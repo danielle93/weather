@@ -132,10 +132,10 @@ $.simpleWeather({
         console.log(weather);
         $('section').hide();
         // Display Data
-        $('#four .temp').text(weather.temp);
-        $('#four .city').text(weather.city);
-        $('#four i').addClass('icon-' + weather.code);
-        $('section').show();
+        $('#three .temp').text(weather.temp);
+        $('#three .city').text(weather.city);
+        $('#three i').addClass('icon-' + weather.code);
+  
         // Get Condition Code
         console.log(weather.code);
         console.log(weather.currently);
