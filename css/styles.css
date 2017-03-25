@@ -206,7 +206,7 @@ background-image: url(../img/snow.jpg);
     background: linear-gradient(to top, white, white);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
-background-image: url();
+background-image: url(../img/cold.jpg);
     background-repeat: no-repeat;
     background-size: cover;    
 }
