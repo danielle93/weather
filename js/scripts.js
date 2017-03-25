@@ -60,26 +60,22 @@ var getWeather = function (location) {
             $('#one .city').text(weather.city);
             $('#one i').addClass('icon-' + weather.code);
             
-            $('#two .temp').text(weather.forecast[1].temp)
-            $('#two .city').text(weather.forecast[1].city);
-            $('#two i').addClass('icon-' + weather.forecast[1].code);
-            
             // Get Condition Code
             console.log(weather.code);
             console.log(weather.currently);
             
             if (weather.code >= 19 && weather.code <= 23 || weather.code == 26 || weather.code == 28 || weather.code == 44) {
                 $('section').addClass('cloudy');
-                $('.currently').text('Just a bunch of heckin clouds in the sky.');
+                $('.currently').text('Just a bunch of heckin clouds.');
             }
             if (weather.code == 23 || weather.code == 24) {
                 $('section').addClass('windy');
-                $('.currently').text('Wind. Heck. Wind is not frend.');
+                $('.currently').text('Wind is not frend.');
 
             }
             if (weather.code >= 30 && weather.code <= 36) {
                 $('section').addClass('sunny');
-                $('.currently').text('Heck. So beautiful. Soak up that sun, frend.');
+                $('.currently').text('Soak up that sun, frend.');
 
             }
             if (weather.code == 36) {
@@ -203,3 +199,5 @@ $.simpleWeather({
         console.log('Look outside.');
     }
 });
+
+//------FORECAST CODE HERE--------
