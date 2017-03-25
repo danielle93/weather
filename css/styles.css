@@ -225,7 +225,7 @@ background-image: url(../img/cold.jpg);
     -o-animation: flash2 4s infinite ;
     animation: flash2 4s infinite;
     
-    background-image: url();
+    background-image: url(../img/thunderstorms.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
