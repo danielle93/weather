@@ -117,7 +117,7 @@ $.simpleWeather({
     , success: function (weather) {
         // Entire weather object
         console.log(weather);
-        $('section').hide();
+        
         // Display Data
         $('#three .temp').text(weather.temp);
         $('#three .city').text(weather.city);
