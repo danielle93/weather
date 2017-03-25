@@ -8,11 +8,12 @@ $('.toggle-drawer').click( function() {
      
 });
 
-
+f
 //-----------------------------------------------------Geo Location-----------------------------------------------------
 // Get and store Geo Location lat/long coordinates
 if ('geolocation' in navigator) {
-    $('.geo').show();
+    $('.geo').show().
+    pl 
     
 }
 
@@ -22,19 +23,6 @@ else {
 }
 // On load, Get Geolocation, Call Weather Function
 $('.geo').ready(function () {
-    //load weather using your lat/long coordinates
-    navigator.geolocation.getCurrentPosition(function (position) {
-        // Check lat/long coordinates
-        var lat = position.coords.latitude;
-        var long = position.coords.longitude;
-        $('#loading').hide();
-        console.log(lat, long);
-        // Send to SimpleWeather
-        getWeather(lat + ',' + long);
-    });
-});
-
-$('.geo').click(function () {
     //load weather using your lat/long coordinates
     navigator.geolocation.getCurrentPosition(function (position) {
         // Check lat/long coordinates
