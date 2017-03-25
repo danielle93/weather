@@ -15,6 +15,7 @@ if ('geolocation' in navigator) {
     $('.geo').show();
     
 }
+
 else {
     $('.geo').hide();
     $('.geo').prepend('<p>Geolocation Not Supported.</p>');
@@ -48,54 +49,55 @@ var getWeather = function (location) {
             // Get Condition Code
             console.log(weather.code);
             console.log(weather.currently);
+            
             if (weather.code >= 19 && weather.code <= 23 || weather.code == 26 || weather.code == 28 || weather.code == 44) {
-                $('body').addClass('cloudy');
+                $('section').addClass('cloudy');
                 $('.currently').text('Just a bunch of heckin clouds in the sky.');
             }
             if (weather.code == 23 || weather.code == 24) {
-                $('body').addClass('windy');
+                $('section').addClass('windy');
                 $('.currently').text('Wind. Heck. Wind is not frend.');
 
             }
             if (weather.code >= 30 && weather.code <= 36) {
-                $('body').addClass('sunny');
+                $('section').addClass('sunny');
                 $('.currently').text('Heck. So beautiful. Soak up that sun, frend.');
 
             }
             if (weather.code == 36) {
-                $('body').addClass('hot');
+                $('section').addClass('hot');
                 $('.currently').text('Heckin hot!');
             }
             if (weather.code == 35 || weather.code >= 12 && weather.code <= 19 || weather.code == 7 || weather.code >= 40 && weather.code <= 44 || weather.code == 46) {
-                $('body').addClass('Snow');
+                $('section').addClass('Snow');
                 $('.currently').text('Snowing');
 
             }
             if (weather.code == 25) {
-                $('body').addClass('cold');
+                $('section').addClass('cold');
                 $('.currently').text('Cold as heck!');
 
             }
             if (weather.code == 39 || weather.code == 40 || weather.code >= 5 && weather.code <= 13) {
-                $('body').addClass('rainy');
+                $('section').addClass('rainy');
                 $('.currently').text('Water falling from the hecking sky?!');
             }
             if (weather.code == 3 || weather.code == 4 || weather.code == 37 || weather.code == 38 || weather.code == 45 || weather.code == 47) {
-                $('body').addClass('thunderstorms');
+                $('section').addClass('thunderstorms');
                 $('.currently').text('Thunderstorms doin a<br>heckin spook!');
 
             }
             if (weather.code >= 0 && weather.code <= 2) {
-                $('body').addClass('severe');
+                $('section').addClass('severe');
                 $('.currently').text('Severe weather doin me a heck concern');
             }
             if (weather.code == 27 || weather.code == 29 || weather.code == 31 || weather.code == 33) {
-                $('body').addClass('night');
+                $('section').addClass('night');
                 $('.currently').text('Fren why u awake? Heckin do a sleep!');
             }
             
             if (weather.code == 29 || weather.code == 30){
-                $('body').addClass('partlyCloudy');
+                $('section').addClass('partlyCloudy');
                 $('.currently').text('Clouds doin the sun a heckin bamboozle.');
             }
         }
@@ -106,51 +108,53 @@ var getWeather = function (location) {
     });
 }
 
-//Tomorrow Forecast
+//Spokane Forecast
 $.simpleWeather({
     location: 'Spokane'
     , unit: 'f'
     , success: function (weather) {
         // Entire weather object
         console.log(weather);
+        $('section').hide();
         // Display Data
         $('#four .temp').text(weather.temp);
         $('#four .city').text(weather.city);
         $('#four i').addClass('icon-' + weather.code);
+        $('section').show();
         // Get Condition Code
         console.log(weather.code);
         console.log(weather.currently);
         if (weather.code >= 19 && weather.code <= 23 || weather.code == 26 || weather.code == 28 || weather.code == 30 || weather.code == 44) {
-            $('body').addClass('cloudy');
+            $('section').addClass('cloudy');
             $('.currently').text('Depressing & grey as heck');
         }
         if (weather.code == 23 || weather.code == 24) {
-            $('body').addClass('windy');
+            $('section').addClass('windy');
         }
         if (weather.code >= 30 && weather.code <= 36) {
-            $('body').addClass('sunny');
+            $('section').addClass('sunny');
         }
         if (weather.code == 36) {
-            $('body').addClass('hot');
+            $('section').addClass('hot');
         }
         if (weather.code == 35 || weather.code >= 12 && weather.code <= 19 || weather.code == 7 || weather.code >= 40 && weather.code <= 44 || weather.code == 46) {
-            $('body').addClass('snow');
+            $('section').addClass('snow');
         }
         if (weather.code == 25) {
-            $('body').addClass('cold');
+            $('section').addClass('cold');
         }
         if (weather.code == 39 || weather.code == 40 || weather.code >= 5 && weather.code <= 13) {
-            $('body').addClass('rainy');
+            $('section').addClass('rainy');
             $('.currently').text('Water falling from the Hecking Sky! HECK!');
         }
         if (weather.code == 3 || weather.code == 4 || weather.code == 37 || weather.code == 38 || weather.code == 45 || weather.code == 47) {
-            $('body').addClass('thunderstorms');
+            $('section').addClass('thunderstorms');
         }
         if (weather.code >= 0 && weather.code <= 2) {
-            $('body').addClass('severe');
+            $('section').addClass('severe');
         }
         if (weather.code == 27 || weather.code == 29 || weather.code == 31 || weather.code == 33) {
-            $('body').addClass('night');
+            $('section').addClass('night');
         }
     }
     , error: function (error) {
@@ -162,55 +166,78 @@ $.simpleWeather({
 
 
 
-    //Spokane Weather
-$.simpleWeather({
-    location: 'Spokane'
-    , unit: 'f'
-    , success: function (weather) {
-        // Entire weather object
-        console.log(weather);
-        // Display Data
-        $('#four .temp').text(weather.temp);
-        $('#four .city').text(weather.city);
-        $('#four i').addClass('icon-' + weather.code);
-        // Get Condition Code
-        console.log(weather.code);
-        console.log(weather.currently);
-        if (weather.code >= 19 && weather.code <= 23 || weather.code == 26 || weather.code == 28 || weather.code == 30 || weather.code == 44) {
-            $('body').addClass('cloudy');
-            $('.currently').text('Depressing & grey as heck');
+
+//Tomorrow Forecast 
+//Get Current Location Weather
+var getWeather = function (location) {
+    $.simpleWeather({
+        location: location
+        , unit: 'f'
+        , success: function (weather) {
+            // Entire weather object
+            console.log(weather);
+            // Display Data
+            $('#two .temp').text(weather.temp);
+            $('#two .city').text(weather.city);
+            $('#two i').addClass('icon-' + weather.code);
+            // Get Condition Code
+            console.log(weather.code);
+            console.log(weather.currently);
+            
+            if (weather.code >= 19 && weather.code <= 23 || weather.code == 26 || weather.code == 28 || weather.code == 44) {
+                $('section').addClass('cloudy');
+                $('.currently').text('Just a bunch of heckin clouds in the sky.');
+            }
+            if (weather.code == 23 || weather.code == 24) {
+                $('section').addClass('windy');
+                $('.currently').text('Wind. Heck. Wind is not frend.');
+
+            }
+            if (weather.code >= 30 && weather.code <= 36) {
+                $('section').addClass('sunny');
+                $('.currently').text('Heck. So beautiful. Soak up that sun, frend.');
+
+            }
+            if (weather.code == 36) {
+                $('section').addClass('hot');
+                $('.currently').text('Heckin hot!');
+            }
+            if (weather.code == 35 || weather.code >= 12 && weather.code <= 19 || weather.code == 7 || weather.code >= 40 && weather.code <= 44 || weather.code == 46) {
+                $('section').addClass('Snow');
+                $('.currently').text('Snowing');
+
+            }
+            if (weather.code == 25) {
+                $('section').addClass('cold');
+                $('.currently').text('Cold as heck!');
+
+            }
+            if (weather.code == 39 || weather.code == 40 || weather.code >= 5 && weather.code <= 13) {
+                $('section').addClass('rainy');
+                $('.currently').text('Water falling from the hecking sky?!');
+            }
+            if (weather.code == 3 || weather.code == 4 || weather.code == 37 || weather.code == 38 || weather.code == 45 || weather.code == 47) {
+                $('section').addClass('thunderstorms');
+                $('.currently').text('Thunderstorms doin a<br>heckin spook!');
+
+            }
+            if (weather.code >= 0 && weather.code <= 2) {
+                $('section').addClass('severe');
+                $('.currently').text('Severe weather doin me a heck concern');
+            }
+            if (weather.code == 27 || weather.code == 29 || weather.code == 31 || weather.code == 33) {
+                $('section').addClass('night');
+                $('.currently').text('Fren why u awake? Heckin do a sleep!');
+            }
+            
+            if (weather.code == 29 || weather.code == 30){
+                $('section').addClass('partlyCloudy');
+                $('.currently').text('Clouds doin the sun a heckin bamboozle.');
+            }
         }
-        if (weather.code == 23 || weather.code == 24) {
-            $('body').addClass('windy');
+        , error: function (error) {
+            // Show if weather cannot be retreived
+            console.log('Go do a heckin look outside.');
         }
-        if (weather.code >= 30 && weather.code <= 36) {
-            $('body').addClass('sunny');
-        }
-        if (weather.code == 36) {
-            $('body').addClass('hot');
-        }
-        if (weather.code == 35 || weather.code >= 12 && weather.code <= 19 || weather.code == 7 || weather.code >= 40 && weather.code <= 44 || weather.code == 46) {
-            $('body').addClass('snow');
-        }
-        if (weather.code == 25) {
-            $('body').addClass('cold');
-        }
-        if (weather.code == 39 || weather.code == 40 || weather.code >= 5 && weather.code <= 13) {
-            $('body').addClass('rainy');
-            $('.currently').text('Water falling from the hecking sky! The Heck?!?!');
-        }
-        if (weather.code == 3 || weather.code == 4 || weather.code == 37 || weather.code == 38 || weather.code == 45 || weather.code == 47) {
-            $('body').addClass('thunderstorms');
-        }
-        if (weather.code >= 0 && weather.code <= 2) {
-            $('body').addClass('severe');
-        }
-        if (weather.code == 27 || weather.code == 29 || weather.code == 31 || weather.code == 33) {
-            $('body').addClass('night');
-        }
-    }
-    , error: function (error) {
-        // Show if weather cannot be retreived
-        console.log('Look outside.');
-    }
-});
+    });
+}

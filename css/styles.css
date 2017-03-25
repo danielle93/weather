@@ -52,7 +52,8 @@ aside li:first-child {
 
 .toggle-drawer{
     position: absolute;
-    margin-left: 3%;
+    margin-top: 2%;
+    margin-left: 4%;
     font-size: 5em;
     color: #fff;
 }
@@ -60,6 +61,7 @@ aside li:first-child {
 /*-----All Sections------*/
 /*Styles*/
 section {
+    display: none;
     min-height: 50em;
     width: 100%;
     height: 100%;
@@ -67,28 +69,12 @@ section {
     margin: 0;
     top:0;
     left: 0;
-    right: 0
+    right: 0;
+    bottom: 0;
 }
 
 :target {
     z-index: 1;
-}
-
-
-#one {
-}
-
-
-#two { 
-    background: green;
-}
-
-#three { 
-    background: blue;
-}
-
-#four {
-    background: red;
 }
 
 /***************************
@@ -111,15 +97,20 @@ Conditional Weather Styling
 }
 
 #city{
+    position: absolute;
     font-family: sans-serif;
-    margin-top: -15%;
-    font-size: 1em;
+    font-size: 3em;
+    width: 100%;
+    height: 20%;
+    margin-top: 15%;
     display: flex;
     justify-content: center;
-    color: rgba(0, 0, 0, .5);
+    align-items: center;
+    color: rgba(255, 255, 255, .5);
 }
 
 #currently{
+    position: absolute;
     padding: 5%;   
 /*    background: rgba(0,0,0,.5);*/
     font-family: sans-serif;
@@ -144,8 +135,6 @@ Conditional Weather Styling
 }
 
 .cloudy {
-    margin-top: 100%;
-
     background: gray;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, lightgray, gray);
@@ -157,8 +146,6 @@ Conditional Weather Styling
 }
 
 .windy {
-    margin-top: 110%;
-
     background: brown;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, tan, whitesmoke);
@@ -168,7 +155,6 @@ Conditional Weather Styling
 }
 
 .sunny {
-    margin-top: 100%;
     background: lightyellow;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, skyblue, lightyellow);
@@ -179,9 +165,7 @@ Conditional Weather Styling
 /*    background-image: url();*/
 }
 
-.hot {
-    margin-top: 138%;
-    
+.hot {    
     background: red;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, darkred, red);
@@ -192,9 +176,7 @@ Conditional Weather Styling
 /*    background-image: url();*/
 }
 
-.snow {
-    margin-top: 100%;
-    
+.snow {    
     background: lightblue;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, lightblue, aliceblue);
@@ -205,9 +187,7 @@ Conditional Weather Styling
 /*    background-image: url();*/
 }
 
-.cold {
-    margin-top: 138%;
-    
+.cold {    
     background: white;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, white, white);
@@ -219,19 +199,14 @@ Conditional Weather Styling
     
 }
 
-.rainy {    
-    margin-top: 110%;
-
+.rainy {   
     background-image: url(../img/rainy.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-*/
     
 }
 
-.thunderstorms {
-    margin-top: 110%;
-    
+.thunderstorms {    
     background: yellow;
     -webkit-animation: flash2 4s infinite ;
     -moz-animation: flash2 4s infinite ;
@@ -268,9 +243,7 @@ Conditional Weather Styling
     100% {background: lightyellow;}   
 }
 
-.severe {
-    margin-top: 110%;
-    
+.severe {    
     background: #000;
     -webkit-animation: flash .1s infinite ;
     -moz-animation: flash .1s infinite ;
@@ -296,9 +269,7 @@ Conditional Weather Styling
     100% {background: #FFF;}   
 }
 
-.night {
-    margin-top: 100%;
-    
+.night {    
     background: #000066;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #000022, #000066);
@@ -321,12 +292,14 @@ Weather Icons
 }
 
 i {
-    margin-top: 20%;
     display: flex;
     justify-content: center;
-    color: rgba(0, 0, 0, .5);
+    margin-top: 15%;
+    position: absolute;
+    width: 100%;
+    color: rgba(255, 255, 255, .5);
     font-family: weather;
-    font-size: 15em;
+    font-size: 50em;
     font-weight: normal;
     font-style: normal;
     line-height: 1.0;
