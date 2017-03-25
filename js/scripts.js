@@ -8,7 +8,7 @@ $('.toggle-drawer').click( function() {
      
 });
 
-f
+
 //-----------------------------------------------------Geo Location-----------------------------------------------------
 // Get and store Geo Location lat/long coordinates
 if ('geolocation' in navigator) {
