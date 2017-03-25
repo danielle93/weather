@@ -1,24 +1,73 @@
 /********************
 YOUR STYLES
 *******************/
+
+/*--Drawer--*/
+
+aside{
+    background: rgba(0,0,0,.9);
+    position: fixed;
+    height: 100%;
+    min-height: 100%;
+    top: 0;
+    left: -500px;
+    width: 500px;
+/*  always on top*/
+    z-index: 9999999;
+/*  animate*/
+    transition: left .25s;
+}
+
+aside ul a{
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 3em;
+    list-style: none;
+    text-decoration: none;
+}
+
+aside li {
+    margin-bottom: 4em;
+    margin-left: 1em;
+}
+
+aside li:first-child {
+    margin-top: 30%;
+}
+
+/*Show Drawer*/
+.drawer {
+    top: 0;
+    left: 0;
+}
+
+
+#close {
+    font-size: 3em;
+    position: absolute;
+    width: 100%;
+    margin-left: 88%;
+    margin-top: -120%;
+}
+
+.toggle-drawer{
+    position: absolute;
+    margin-left: 3%;
+    font-size: 5em;
+    color: #fff;
+}
+
+/*-----All Sections------*/
+/*Styles*/
 section {
     min-height: 50em;
     width: 100%;
+    height: 100%;
     position: absolute;
-}
-
-
-#one {
-/*    background: darkgray;*/
-}
-
-
-#two { 
-/*    background: darkgray;*/
-}
-
-#three { 
-/*    background: darkgray;*/
+    margin: 0;
+    top:0;
+    left: 0;
+    right: 0
 }
 
 :target {
@@ -26,86 +75,43 @@ section {
 }
 
 
-button {
-    display: block;
-}
-
-#sidr{
-    text-decoration: none;
-    background: rgba(0,0,0,.5);
-    
-}
-
- #sidr a{
-    color: #fff;
-    text-decoration: none;
-}
-
-#sidr ul{
-    padding-left: 10%;
-    list-style: none;
-    
-}
-
-#sidr li {
-    margin-bottom: 1em;
-}
-
-#sidr li:first-child {
-    margin-top: 2em;
+#one {
 }
 
 
-.sidr {
-    display: block;
-    position: fixed;
-    top: 0;
-    height: 100%;
-    z-index: 999999;
-    width: 14em;
-    overflow-x: hidden;
-    overflow-y: auto;
+#two { 
+    background: green;
 }
 
-.sidr.left {
-    left: -16em;
-    right: auto;
+#three { 
+    background: blue;
 }
 
-#sidr-show-hide{
-    padding: 2%;
-    font-size: 2em;
-    text-decoration: none;
-    color: rgba(255, 255, 255, 1);
-    text-shadow: .5px .5px .5px rgba(0,0,0,.4);
+#four {
+    background: red;
 }
-
-#close {
-    position: absolute;
-    width: 100%;
-    margin-left: 90%;
-    margin-top: -55%;
-}
-
 
 /***************************
 Conditional Weather Styling
 ***************************/
 
 #temp {
-    font-size: 2em;
-    margin-left: 80%;
-    margin-top: -8%;
+    position: relative;
+    font-family: sans-serif;
+    font-size: 7em;
+    margin-left: 70%;
+    margin-top: 1%;
     color: rgba(255, 255, 255, 1);
-    text-shadow: .5px .5px .5px rgba(0,0,0,.4);
+    text-shadow: 2px 2px 1px rgba(0,0,0,.5);
 }
 
 .temp {
     color: rgba(255, 255, 255, 1);
-    text-shadow: .5px .5px .5px rgba(0,0,0,.4);
+    text-shadow: 2px 2px 1px rgba(0,0,0,.5);
 }
 
 #city{
+    font-family: sans-serif;
     margin-top: -15%;
     font-size: 1em;
     display: flex;
@@ -114,63 +120,191 @@ Conditional Weather Styling
 }
 
 #currently{
-    display: flex;
-    justify-content: center;
-    margin-top: 25%;
-    font-size: 2.5em;
-    padding: 5%;
-    width: 100%;
+    padding: 5%;   
+/*    background: rgba(0,0,0,.5);*/
+    font-family: sans-serif;
+    width: 90%;
+    margin-top: 110%;
+    font-size: 6.8em;
     color: #fff;
     text-shadow: 2px 2px 2px rgba(0,0,0,.4);
 }
 
+
+/*~~~~~~~~~~~~*/
+.partlyCloudy {
+    background: #ddd;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #ddd, lightyellow ,#ddd);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #ddd, lightyellow ,#ddd);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+/*    background-image: url();*/
+}
+
 .cloudy {
+    margin-top: 100%;
+
     background: gray;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, lightgray, gray);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, lightgray, gray);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+/*    background-image: url();*/
 }
 
 .windy {
-    background: brown;
-}
+    margin-top: 110%;
 
-.sunny {
-    background: #F2994A;
+    background: brown;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #F2994A, #F2C94C);
+    background: -webkit-linear-gradient(to top, tan, whitesmoke);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #F2994A, #F2C94C);
+    background: linear-gradient(to top, tan , whitesmoke);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.sunny {
+    margin-top: 100%;
+    background: lightyellow;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, skyblue, lightyellow);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, skyblue, lightyellow);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+/*    background-image: url();*/
+}
+
 .hot {
+    margin-top: 138%;
+    
     background: red;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, darkred, red);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, maroon, red);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+/*    background-image: url();*/
 }
 
 .snow {
-    background: aliceblue;
+    margin-top: 100%;
+    
+    background: lightblue;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, lightblue, aliceblue);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, lightblue, whitesmoke);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+/*    background-image: url();*/
 }
 
 .cold {
-    background: lightgray;
+    margin-top: 138%;
+    
+    background: white;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, white, white);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, white, white);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+/*    background-image: url();*/
+    
 }
 
 .rainy {    
-  background-image: url(../img/rainy.jpg);
-      background-repeat: no-repeat;
-    background-size: cover;
+    margin-top: 110%;
 
-/*    background: blue;*/
+    background-image: url(../img/rainy.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+*/
+    
 }
 
 .thunderstorms {
+    margin-top: 110%;
+    
     background: yellow;
+    -webkit-animation: flash2 4s infinite ;
+    -moz-animation: flash2 4s infinite ;
+    -o-animation: flash2 4s infinite ;
+    animation: flash2 4s infinite;
+}
+
+@keyframes flash2 {
+    0% {background: #000022;}
+    50% {background: #000022;}
+    80% {background: #000022;}
+    99% {background: #000022;}
+    100% {background: lightyellow;}  
+}
+@-webkit-keyframes flash{
+    0% {background: #000022;}
+    50% {background: #000022;}
+    80% {background: #000022;}
+    99% {background: #000022;}
+    100% {background: lightyellow;} 
+}
+@-moz-keyframes flash{
+    0% {background: #000022;}
+    50% {background: #000022;}
+    80% {background: #000022;}
+    99% {background: #000022;}
+    100% {background: lightyellow;} 
+}
+@-o-keyframes flash{
+    0% {background: #000022;}
+    50% {background: #000022;}
+    80% {background: #000022;}
+    99% {background: #000022;}
+    100% {background: lightyellow;}   
 }
 
 .severe {
+    margin-top: 110%;
+    
     background: #000;
+    -webkit-animation: flash .1s infinite ;
+    -moz-animation: flash .1s infinite ;
+    -o-animation: flash .1s infinite ;
+    animation: flash .1s infinite;
+}
+
+@keyframes flash{
+    0% {background: #000;}
+    50% {background: #000;}
+    100% {background: #FFF;}  
+}
+@-webkit-keyframes flash{
+    0% {background: #000;}
+    100% {background: #FFF;} 
+}
+@-moz-keyframes flash{
+    0% {background: #000;}
+    100% {background: #FFF;} 
+}
+@-o-keyframes flash{
+    0% {background: #000;}
+    100% {background: #FFF;}   
 }
 
 .night {
-    background: darkblue;
+    margin-top: 100%;
+    
+    background: #000066;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #000022, #000066);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #000022, #000066);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 

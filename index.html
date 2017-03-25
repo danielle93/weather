@@ -1,70 +1,68 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Weather</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Normalize CSS makes browsers render all elements more consistently -->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
+    <!-- YOUR STYLES GO HERE -->
+    <link rel="stylesheet" href="css/styles.css"> </head>
 
-  <title>Weather</title>
- 
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <!-- Normalize CSS makes browsers render all elements more consistently -->
-  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">  
-  <!-- YOUR STYLES GO HERE -->
-  <link rel="stylesheet" href="css/styles.css">	
-	
-</head>
-<body>
-<a id="sidr-show-hide" href="#sidr">&#9776;</a>
+<body> 
+  <aside class="">
+        <ul>
+            <li><a href="#one">Current Location</a></li>
+            <li><a href="#two">Heck Tomorrow</a></li>
+            <li><a href="#three">BAMBOOZLED??</a></li>
+            <li><a href="#four">Spokane, WA</a></li>
+        </ul>
+        
+        <a class="toggle-drawer" id="close">&#x2715;</a>
+    </aside>
+   
+    <section class="weather" id="one">
+       <a class="toggle-drawer">&#9776;</a>
+<!--        <h2 id="loading">Bork-O-Meter is fetching your current weather...</h2>-->
+        <h1 id="temp"><span class="temp">??</span>&#x2109;</h1> 
+        <i class=""> </i>
+        <h1 id="city" class="city"></h1>
+        <h1 id="currently">S E V E R E weather causing hecking concern<span class="currently"></span></h1> 
+        </section>
+        
+    <section class="weather" id="two">
+       <a class="toggle-drawer">&#9776;</a>
+        <h1 id="temp"><span class="temp">??</span>&#x2109;</h1> 
+        <i class=""> </i>
+        <h1 id="city" class="city"></h1>
+        <h1 id="currently"><span class="currently"></span></h1> </section>
+        
+    <section class="weather" id="three">
+       <a class="toggle-drawer">&#9776;</a>
+        <h1 id="temp"><span class="temp">??</span>&#x2109;</h1> 
+        <i class=""> </i>
+        <h1 id="city" class="city"></h1>
+        <h1 id="currently"><span class="currently"></span></h1> </section>
+        
+    <section class="weather" id="four">
+       <a class="toggle-drawer">&#9776;</a>
+        <h1 id="temp"><span class="temp">??</span>&#x2109;</h1> 
+        <i class=""> </i>
+        <h1 id="city" class="city"></h1>
+        <h1 id="currently"><span class="currently"></span></h1> </section>
+        
 
-<section class="weather" id="one">
-    <h2 id="loading">Bork-O-Meter is fetching your current weather...</h2>
-    <h1 id="temp"><span class="temp">??</span>&#x2109;</h1>
-    <i class=""> </i>
-    <h1 id="city" class="city"></h1>
-    
-    <h1 id="currently"><span class="currently"></span></h1>
-</section>
-
-<!--%%%Put these in seperate index pages
-            <section class="weather" id="two">
-                <h1 id="temp"><span class="temp">??</span>&#x2109;</h1>
-                <i class=""> </i>
-                <h1 id="city" class="city"></h1>
-
-                <h1 id="currently"><span class="currently"></span></h1>
-            </section>
-
-            <section class="weather" id="three">
-                <h1 id="temp"><span class="temp">??</span>&#x2109;</h1>
-                <i class=""> </i>
-                <h1 id="city" class="city"></h1>
-
-                <h1 id="currently"><span class="currently"></span></h1>
-            </section>
--->
-
-<aside id="sidr">
-
-  <ul>
-    <li><a href="#one">Current Location</a></li>
-    <li><a href="#two">Spokane, WA</a></li>
-    <li><a href="#three">Nine Mile Falls, WA</a></li>
-  </ul>
-  
-  <a href="#sidr" id="close">X</a>
-  
-</aside>
-	
-
-
-  <!-- jQuery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	
-  <!-- jQuery Plugin -->
-<!--  <script src="js/plugin.js"></script>-->
- <script src="js/jquery.simpleWeather.min.js"></script>
- <script src="js/jquery.sidr.min.js"></script>
-  <!-- YOUR SCRIPTS GO HERE -->
-  <script src="js/scripts.js"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- jQuery Plugin -->
+    <!--  <script src="js/plugin.js"></script>-->
+    <script src="js/jquery.simpleWeather.min.js"></script>
+<!--    <script src="js/jquery.sidr.min.js"></script>-->
+    <!-- YOUR SCRIPTS GO HERE -->
+    <script src="js/scripts.js"></script>
 </body>
+
 </html>
