@@ -34,6 +34,19 @@ $('.geo').ready(function () {
     });
 });
 
+$('.geo').click(function () {
+    //load weather using your lat/long coordinates
+    navigator.geolocation.getCurrentPosition(function (position) {
+        // Check lat/long coordinates
+        var lat = position.coords.latitude;
+        var long = position.coords.longitude;
+        $('#loading').hide();
+        console.log(lat, long);
+        // Send to SimpleWeather
+        getWeather(lat + ',' + long);
+    });
+});
+
 //Get Current Location Weather
 var getWeather = function (location) {
     $.simpleWeather({
