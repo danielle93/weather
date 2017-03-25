@@ -13,7 +13,6 @@ f
 // Get and store Geo Location lat/long coordinates
 if ('geolocation' in navigator) {
     $('.geo').show().
-    pl 
     
 }
 
