@@ -34,6 +34,19 @@ $('.geo').ready(function () {
     });
 });
 
+$('.geo').click(function () {
+    //load weather using your lat/long coordinates
+    navigator.geolocation.getCurrentPosition(function (position) {
+        // Check lat/long coordinates
+        var lat = position.coords.latitude;
+        var long = position.coords.longitude;
+        $('#loading').hide();
+        console.log(lat, long);
+        // Send to SimpleWeather
+        getWeather(lat + ',' + long);
+    });
+});
+
 //-----------------------------------------------------Get Current Location Weather--------------------------------------------------
 var getWeather = function (location) {
     $.simpleWeather({
@@ -47,22 +60,26 @@ var getWeather = function (location) {
             $('#one .city').text(weather.city);
             $('#one i').addClass('icon-' + weather.code);
             
+            $('#two .temp').text(weather.forecast[1].temp)
+            $('#two .city').text(weather.forecast[1].city);
+            $('#two i').addClass('icon-' + weather.forecast[1].code);
+            
             // Get Condition Code
             console.log(weather.code);
             console.log(weather.currently);
             
             if (weather.code >= 19 && weather.code <= 23 || weather.code == 26 || weather.code == 28 || weather.code == 44) {
                 $('section').addClass('cloudy');
-                $('.currently').text('Just a bunch of heckin clouds.');
+                $('.currently').text('Just a bunch of heckin clouds in the sky.');
             }
             if (weather.code == 23 || weather.code == 24) {
                 $('section').addClass('windy');
-                $('.currently').text('Wind is not frend.');
+                $('.currently').text('Wind. Heck. Wind is not frend.');
 
             }
             if (weather.code >= 30 && weather.code <= 36) {
                 $('section').addClass('sunny');
-                $('.currently').text('Soak up that sun, frend.');
+                $('.currently').text('Heck. So beautiful. Soak up that sun, frend.');
 
             }
             if (weather.code == 36) {
@@ -117,12 +134,12 @@ $.simpleWeather({
     , success: function (weather) {
         // Entire weather object
         console.log(weather);
-        
+        $('section').hide();
         // Display Data
-        $('#three .temp').text(weather.temp);
-        $('#three .city').text(weather.city);
-        $('#three i').addClass('icon-' + weather.code);
-  
+        $('#four .temp').text(weather.temp);
+        $('#four .city').text(weather.city);
+        $('#four i').addClass('icon-' + weather.code);
+        $('section').show();
         // Get Condition Code
         console.log(weather.code);
         console.log(weather.currently);
@@ -186,5 +203,3 @@ $.simpleWeather({
         console.log('Look outside.');
     }
 });
-
-//------FORECAST CODE HERE--------
