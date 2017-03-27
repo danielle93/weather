@@ -2,7 +2,7 @@
 $('section').show();
 $('div').show();
 $('div').addClass('bg');
-
+$('#temp').hide();
 
 
 //Toggle Drawer
@@ -54,6 +54,7 @@ $('.geo').click( function() {
             // Entire weather object
             console.log(weather);
             // Display Data
+            $('#temp').show();
             $('#one .temp').text(weather.temp);
             $('#one .city').text(weather.city);
             $('#one .condition').text(weather.text);
@@ -128,6 +129,7 @@ $('.geo').click( function() {
         // Entire weather object
         console.log(weather);
         // Display Data
+        $('#temp').show();
         $('#five .temp').text(weather.temp);
         $('#five .city').text(weather.city);
         $('#five .condition').text(weather.text);
@@ -152,6 +154,7 @@ $('.geo').click( function() {
         // Entire weather object
         console.log(weather);
         // Display Data
+        $('#temp').show();
         $('#four .temp').text(weather.temp);
         $('#four .city').text(weather.city);
         $('#four .condition').text(weather.text);
@@ -176,6 +179,7 @@ $('.geo').click( function() {
         // Entire weather object
         console.log(weather);
         // Display Data
+        $('#temp').show();
         $('#three .temp').text(weather.temp);
         $('#three .city').text(weather.city);
         $('#three .condition').text(weather.text);
