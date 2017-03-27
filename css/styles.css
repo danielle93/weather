@@ -54,7 +54,7 @@ li img {
     position: absolute;
     width: 100%;
     margin-left: 88%;
-    margin-top: -148%;
+    margin-top: -140%;
 }
 
 .toggle-drawer{
@@ -110,6 +110,10 @@ h2{
     background-size: cover;
 }
 
+button {
+    border: none;
+    background: none;
+}
 
 /***************************
 Conditional Weather Styling
